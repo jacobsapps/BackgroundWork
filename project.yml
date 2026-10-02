@@ -1,0 +1,41 @@
+name: BackgroundWork
+fileGroups: [ARTICLE.md, README.md]
+options:
+  bundleIdPrefix: com.jacob
+  deploymentTarget:
+    iOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: TG6SK4A998
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  BackgroundWork:
+    type: application
+    platform: iOS
+    sources:
+      - BackgroundWork
+      - Extensions/NearbyLiveActivity/NearbyActivityAttributes.swift
+    dependencies:
+      - target: NearbyLiveActivity
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jacob.BackgroundWork
+        INFOPLIST_FILE: BackgroundWork/Configuration/Info.plist
+        CODE_SIGN_ENTITLEMENTS: BackgroundWork/Configuration/BackgroundWork.entitlements
+        ENABLE_USER_SCRIPT_SANDBOXING: YES
+  NearbyLiveActivity:
+    type: app-extension
+    platform: iOS
+    sources: [Extensions/NearbyLiveActivity]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jacob.BackgroundWork.NearbyWidget
+        INFOPLIST_FILE: Extensions/NearbyLiveActivity/Info.plist
+        SKIP_INSTALL: YES
+schemes:
+  BackgroundWork:
+    build:
+      targets:
+        BackgroundWork: all
