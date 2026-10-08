@@ -5,17 +5,9 @@ final class ProcessingService {
 
     func register() {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.jacob.BackgroundWork.processing", using: nil) { task in
-            let cleanup = Task.detached {
-                if !Task.isCancelled {
-                    let file = URL.cachesDirectory.appending(path: "news.rss")
-                    if FileManager.default.fileExists(atPath: file.path) {
-                        try! FileManager.default.removeItem(at: file)
-                    }
-                    print("Cached news removed")
-                }
-                task.setTaskCompleted(success: !Task.isCancelled)
-            }
-            task.expirationHandler = { cleanup.cancel() }
+            let file = URL.cachesDirectory.appending(path: "news.rss")
+            try? FileManager.default.removeItem(at: file)
+            task.setTaskCompleted(success: true)
         }
     }
 

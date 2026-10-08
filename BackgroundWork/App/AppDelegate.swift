@@ -8,9 +8,10 @@ import UIKit
         print(Date(), "Launch:", UIDevice.current.systemVersion)
         RefreshService.shared.register()
         ProcessingService.shared.register()
+        HealthResearchService.shared.register()
         ContinuedProcessingService.shared.register()
         _ = DownloadService.shared.session
-        GeofenceService.shared.restore()
+        Task { try await GeofenceService.shared.start() }
         return true
     }
 
@@ -19,13 +20,14 @@ import UIKit
         _ = DownloadService.shared.session
     }
 
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        PushService.shared.token = deviceToken.map { String(format: "%02x", $0) }.joined()
-    }
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    PushService.shared.token = deviceToken.map { String(format: "%02x", $0) }.joined()
+}
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) { print(error) }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        completionHandler(PushService.shared.receive())
+        print("Background push received")
+        completionHandler(.noData)
     }
 }

@@ -14,6 +14,7 @@ import AVFAudio
         recorder!.record()
     }
 
+    // Demo control; the article only needs the start/play example above.
     func stop() {
         recorder?.stop()
         recorder = nil

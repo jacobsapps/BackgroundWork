@@ -19,6 +19,7 @@ targets:
       - Extensions/NearbyLiveActivity/NearbyActivityAttributes.swift
     dependencies:
       - target: NearbyLiveActivity
+      - target: NotificationService
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jacob.BackgroundWork
@@ -33,6 +34,15 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jacob.BackgroundWork.NearbyWidget
         INFOPLIST_FILE: Extensions/NearbyLiveActivity/Info.plist
+        SKIP_INSTALL: YES
+  NotificationService:
+    type: app-extension
+    platform: iOS
+    sources: [Extensions/NotificationService]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jacob.BackgroundWork.NotificationService
+        INFOPLIST_FILE: Extensions/NotificationService/Info.plist
         SKIP_INSTALL: YES
 schemes:
   BackgroundWork:

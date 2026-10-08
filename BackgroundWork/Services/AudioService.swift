@@ -11,6 +11,7 @@ import AVFAudio
         player!.play()
     }
 
+    // Demo control; the article only needs the start/play example above.
     func stop() {
         player?.stop()
         player = nil

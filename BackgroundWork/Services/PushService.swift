@@ -1,5 +1,6 @@
 import Observation
 import UIKit
+import UserNotifications
 
 @MainActor @Observable final class PushService {
     static let shared = PushService()
@@ -7,8 +8,9 @@ import UIKit
 
     func register() { UIApplication.shared.registerForRemoteNotifications() }
 
-    func receive() -> UIBackgroundFetchResult {
-        print("Background push received")
-        return .noData
+    func enableAlerts() async throws {
+        _ = try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound])
+        register()
     }
+
 }

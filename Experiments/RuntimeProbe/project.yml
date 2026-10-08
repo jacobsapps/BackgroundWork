@@ -1,0 +1,35 @@
+name: RuntimeProbe
+options:
+  deploymentTarget:
+    iOS: '26.0'
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    DEVELOPMENT_TEAM: TG6SK4A998
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: '1'
+targets:
+  RuntimeProbe:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+      - path: ../../BackgroundWork/Resources/mountain.jpg
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jacob.BackgroundWork.RuntimeProbe
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: Runtime Probe
+        UILaunchScreen: {}
+        UIBackgroundModes: [processing]
+        BGTaskSchedulerPermittedIdentifiers: [com.jacob.BackgroundWork.RuntimeProbe.continued]
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+schemes:
+  RuntimeProbe:
+    build:
+      targets:
+        RuntimeProbe: all

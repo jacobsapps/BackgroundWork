@@ -20,11 +20,9 @@ import Foundation
     }
 
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        guard (downloadTask.response as! HTTPURLResponse).statusCode == 200 else { return }
         let file = URL.documentsDirectory.appending(path: "wwdc-background-tasks.mp4")
         try? FileManager.default.removeItem(at: file)
         try! FileManager.default.moveItem(at: location, to: file)
-        print(Date(), "Downloaded:", file.lastPathComponent)
     }
 
     func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {

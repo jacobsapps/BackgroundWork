@@ -1,0 +1,7 @@
+{
+  "aps": {
+    "alert": { "title": "Original title", "body": "The extension changes the title before you see this." },
+    "mutable-content": 1,
+    "sound": "default"
+  }
+}

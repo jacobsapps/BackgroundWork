@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AABB00112233445566778801 /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AABB00112233445566778802 /* mountain.jpg */; };
-		38E2B3179CAF4983BC3E634B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8AF6C9AC784C521F6114DD /* AppDelegate.swift */; };
+		04EA82FBB34C4C8D9A4BD77E /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3A5B659E0C074AB787006C3E /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0D01C2A5C6FA00E4F4C6C9CE /* crawling-ragtime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19D555648DEA45AA77E52749 /* crawling-ragtime.mp3 */; };
 		12338CE1815E4662A1C6A579 /* ProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B2AE28BCF018866628584 /* ProcessingService.swift */; };
+		172667374E224D8F91D3211A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252276C543D4EB1BE73499D /* NotificationService.swift */; };
 		1D9CB4282DFF3BEAF4A81469 /* BackgroundWorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6E7DF6286CFF9B71DA246 /* BackgroundWorkApp.swift */; };
+		38E2B3179CAF4983BC3E634B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8AF6C9AC784C521F6114DD /* AppDelegate.swift */; };
 		45686ADEBDD1BE402498C96F /* RecordingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307AB1647C4193463E0A4866 /* RecordingService.swift */; };
 		473AD7E236F54B7CBA135AC3 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEFACEFD86C2EE4D09E09B5 /* PushService.swift */; };
 		49936434466D86DB7F145E5E /* BackgroundTimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892F3F630DE511132492B40 /* BackgroundTimeService.swift */; };
@@ -22,6 +23,9 @@
 		6A47EF0F69A691D182F3C889 /* NearbyActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F82FDD8D3E744EB605A37B6 /* NearbyActivityAttributes.swift */; };
 		7E5F0CE1D56E6BDE635D67F1 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8054DCEADCEB4794BAA0AC /* AudioService.swift */; };
 		8767090CCF9A6EA2739C4A90 /* NearbyLiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BCDBF3A5E3A872ED91C37CFD /* NearbyLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AABB00112233445566778801 /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AABB00112233445566778802 /* mountain.jpg */; };
+		AB1200120012001200120001 /* HealthResearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1200120012001200120002 /* HealthResearchService.swift */; };
+		AB1300130013001300130001 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1300130013001300130002 /* LocationService.swift */; };
 		B3D440DB7625A3201B1FA015 /* NearbyLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0E1A247566CE43179AF86 /* NearbyLiveActivityWidget.swift */; };
 		B968B8EDEBD5E4CF905C5392 /* RefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DD6BDBC0B3E3E17BDC855 /* RefreshService.swift */; };
 		CEFF9998CB00B1F5DC9A5446 /* DemoListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A8D69B99F93406DE359CF /* DemoListScreen.swift */; };
@@ -36,6 +40,13 @@
 			remoteGlobalIDString = CA46052F07D1EC97FA053EE7;
 			remoteInfo = NearbyLiveActivity;
 		};
+		BA9A778152FC4580A349A7B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4F8AEB71A607DD5007C1CAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74881F693FE94F8DAA1047C0;
+			remoteInfo = NotificationService;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +57,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				8767090CCF9A6EA2739C4A90 /* NearbyLiveActivity.appex in Embed Foundation Extensions */,
+				04EA82FBB34C4C8D9A4BD77E /* NotificationService.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,44 +65,65 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AABB00112233445566778802 /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
-		2D8AF6C9AC784C521F6114DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE76928A55FEAE8CB53A5569 /* ARTICLE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARTICLE.md; sourceTree = "<group>"; };
-		E4E13DBF8DDF07CD93FCCB1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-
+		0252276C543D4EB1BE73499D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		0C8B2AE28BCF018866628584 /* ProcessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingService.swift; sourceTree = "<group>"; };
 		19D555648DEA45AA77E52749 /* crawling-ragtime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crawling-ragtime.mp3"; sourceTree = "<group>"; };
 		1A3DD6BDBC0B3E3E17BDC855 /* RefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshService.swift; sourceTree = "<group>"; };
+		2D8AF6C9AC784C521F6114DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		307AB1647C4193463E0A4866 /* RecordingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingService.swift; sourceTree = "<group>"; };
 		329EA0C9C9B045F808B44EF9 /* ContinuedProcessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuedProcessingService.swift; sourceTree = "<group>"; };
 		334EA0EE8A6CC4703F3FB840 /* BackgroundWork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundWork.entitlements; sourceTree = "<group>"; };
 		374A8D69B99F93406DE359CF /* DemoListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListScreen.swift; sourceTree = "<group>"; };
+		3A5B659E0C074AB787006C3E /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282009E8282218A69E7FA8D /* GeofenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceService.swift; sourceTree = "<group>"; };
 		4F82FDD8D3E744EB605A37B6 /* NearbyActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyActivityAttributes.swift; sourceTree = "<group>"; };
 		57F6E7DF6286CFF9B71DA246 /* BackgroundWorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWorkApp.swift; sourceTree = "<group>"; };
 		5A0D95E825807CB0C145119C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		61A92C35C12C40269EBBDCB0 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
-		643D4FE5BB039FF44AB8FA25 /* BackgroundWork.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BackgroundWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		643D4FE5BB039FF44AB8FA25 /* BackgroundWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF7A1A87E9369E472376ED4 /* NearbyInteractionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyInteractionService.swift; sourceTree = "<group>"; };
 		7F8054DCEADCEB4794BAA0AC /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		8892F3F630DE511132492B40 /* BackgroundTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTimeService.swift; sourceTree = "<group>"; };
+		AABB00112233445566778802 /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
+		AB1200120012001200120002 /* HealthResearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthResearchService.swift; sourceTree = "<group>"; };
+		AB1300130013001300130002 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B0B0E1A247566CE43179AF86 /* NearbyLiveActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyLiveActivityWidget.swift; sourceTree = "<group>"; };
-		BCDBF3A5E3A872ED91C37CFD /* NearbyLiveActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = NearbyLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4BA177185B4723B83AE4E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BCDBF3A5E3A872ED91C37CFD /* NearbyLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NearbyLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663438D01E512788E103D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DBEFACEFD86C2EE4D09E09B5 /* PushService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushService.swift; sourceTree = "<group>"; };
+		E4E13DBF8DDF07CD93FCCB1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE76928A55FEAE8CB53A5569 /* ARTICLE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARTICLE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		D6B75613B11D4BBA5C83AD5B /* BackgroundWork */ = {
+		0A9A752651EC7B5ABBC121D7 /* NearbyLiveActivity */ = {
 			isa = PBXGroup;
 			children = (
-				4C9C6E1B1EDB7E54B25BC0DF /* App */,
-				5D2923681008D21A44666BBF /* Screens */,
-				F1EF41131A0CF02EA05BF404 /* Services */,
-				2E88C94AE5AC203AB6C5656D /* Resources */,
-				81591480638D7EF84F755A70 /* Configuration */,
+				B0B0E1A247566CE43179AF86 /* NearbyLiveActivityWidget.swift */,
+				4F82FDD8D3E744EB605A37B6 /* NearbyActivityAttributes.swift */,
+				5A0D95E825807CB0C145119C /* Info.plist */,
 			);
-			path = BackgroundWork;
+			path = NearbyLiveActivity;
+			sourceTree = "<group>";
+		};
+		101053B908D50B8C5CCFF6C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				643D4FE5BB039FF44AB8FA25 /* BackgroundWork.app */,
+				BCDBF3A5E3A872ED91C37CFD /* NearbyLiveActivity.appex */,
+				3A5B659E0C074AB787006C3E /* NotificationService.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E88C94AE5AC203AB6C5656D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19D555648DEA45AA77E52749 /* crawling-ragtime.mp3 */,
+				AABB00112233445566778802 /* mountain.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4C9C6E1B1EDB7E54B25BC0DF /* App */ = {
@@ -110,30 +143,13 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		F1EF41131A0CF02EA05BF404 /* Services */ = {
+		5DF66AF81B7F924E9A0B3D61 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7F8054DCEADCEB4794BAA0AC /* AudioService.swift */,
-				8892F3F630DE511132492B40 /* BackgroundTimeService.swift */,
-				329EA0C9C9B045F808B44EF9 /* ContinuedProcessingService.swift */,
-				61A92C35C12C40269EBBDCB0 /* DownloadService.swift */,
-				4282009E8282218A69E7FA8D /* GeofenceService.swift */,
-				7AF7A1A87E9369E472376ED4 /* NearbyInteractionService.swift */,
-				0C8B2AE28BCF018866628584 /* ProcessingService.swift */,
-				DBEFACEFD86C2EE4D09E09B5 /* PushService.swift */,
-				307AB1647C4193463E0A4866 /* RecordingService.swift */,
-				1A3DD6BDBC0B3E3E17BDC855 /* RefreshService.swift */,
+				0A9A752651EC7B5ABBC121D7 /* NearbyLiveActivity */,
+				BF50E04D5B2940E8A32C3F3E /* NotificationService */,
 			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		2E88C94AE5AC203AB6C5656D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				19D555648DEA45AA77E52749 /* crawling-ragtime.mp3 */,
-				AABB00112233445566778802 /* mountain.jpg */,
-			);
-			path = Resources;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		81591480638D7EF84F755A70 /* Configuration */ = {
@@ -143,33 +159,6 @@
 				334EA0EE8A6CC4703F3FB840 /* BackgroundWork.entitlements */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		5DF66AF81B7F924E9A0B3D61 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0A9A752651EC7B5ABBC121D7 /* NearbyLiveActivity */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		0A9A752651EC7B5ABBC121D7 /* NearbyLiveActivity */ = {
-			isa = PBXGroup;
-			children = (
-				B0B0E1A247566CE43179AF86 /* NearbyLiveActivityWidget.swift */,
-				4F82FDD8D3E744EB605A37B6 /* NearbyActivityAttributes.swift */,
-				5A0D95E825807CB0C145119C /* Info.plist */,
-			);
-			path = NearbyLiveActivity;
-			sourceTree = "<group>";
-		};
-		101053B908D50B8C5CCFF6C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				643D4FE5BB039FF44AB8FA25 /* BackgroundWork.app */,
-				BCDBF3A5E3A872ED91C37CFD /* NearbyLiveActivity.appex */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A6AF16B638DDD9043EAE7B1E = {
@@ -183,9 +172,66 @@
 			);
 			sourceTree = "<group>";
 		};
+		BF50E04D5B2940E8A32C3F3E /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				0252276C543D4EB1BE73499D /* NotificationService.swift */,
+				BA4BA177185B4723B83AE4E8 /* Info.plist */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
+		D6B75613B11D4BBA5C83AD5B /* BackgroundWork */ = {
+			isa = PBXGroup;
+			children = (
+				4C9C6E1B1EDB7E54B25BC0DF /* App */,
+				5D2923681008D21A44666BBF /* Screens */,
+				F1EF41131A0CF02EA05BF404 /* Services */,
+				2E88C94AE5AC203AB6C5656D /* Resources */,
+				81591480638D7EF84F755A70 /* Configuration */,
+			);
+			path = BackgroundWork;
+			sourceTree = "<group>";
+		};
+		F1EF41131A0CF02EA05BF404 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7F8054DCEADCEB4794BAA0AC /* AudioService.swift */,
+				8892F3F630DE511132492B40 /* BackgroundTimeService.swift */,
+				329EA0C9C9B045F808B44EF9 /* ContinuedProcessingService.swift */,
+				61A92C35C12C40269EBBDCB0 /* DownloadService.swift */,
+				4282009E8282218A69E7FA8D /* GeofenceService.swift */,
+				AB1300130013001300130002 /* LocationService.swift */,
+				7AF7A1A87E9369E472376ED4 /* NearbyInteractionService.swift */,
+				0C8B2AE28BCF018866628584 /* ProcessingService.swift */,
+				AB1200120012001200120002 /* HealthResearchService.swift */,
+				DBEFACEFD86C2EE4D09E09B5 /* PushService.swift */,
+				307AB1647C4193463E0A4866 /* RecordingService.swift */,
+				1A3DD6BDBC0B3E3E17BDC855 /* RefreshService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		74881F693FE94F8DAA1047C0 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F7E44E358C4D0695C56B92 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				2706CFEC902448FFB4DDF363 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			packageProductDependencies = (
+			);
+			productName = NotificationService;
+			productReference = 3A5B659E0C074AB787006C3E /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CA46052F07D1EC97FA053EE7 /* NearbyLiveActivity */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AE34CE09EB19F2FD5E96BB0 /* Build configuration list for PBXNativeTarget "NearbyLiveActivity" */;
@@ -215,6 +261,7 @@
 			);
 			dependencies = (
 				05D4A9A51D9D9F3441AA63CD /* PBXTargetDependency */,
+				2921B34090D04CDDAAE13944 /* PBXTargetDependency */,
 			);
 			name = BackgroundWork;
 			packageProductDependencies = (
@@ -233,11 +280,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					CA46052F07D1EC97FA053EE7 = {
-						DevelopmentTeam = TG6SK4A998;
 						ProvisioningStyle = Automatic;
 					};
 					F8D036C01B752180436AC8CD = {
-						DevelopmentTeam = TG6SK4A998;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -258,6 +303,7 @@
 			targets = (
 				F8D036C01B752180436AC8CD /* BackgroundWork */,
 				CA46052F07D1EC97FA053EE7 /* NearbyLiveActivity */,
+				74881F693FE94F8DAA1047C0 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +321,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2706CFEC902448FFB4DDF363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				172667374E224D8F91D3211A /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B358767011B2CB8E3CBDE0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,9 +341,11 @@
 				62BB197E371D46EC7B094808 /* ContinuedProcessingService.swift in Sources */,
 				5DC7701A99FF9A4B8325F260 /* DownloadService.swift in Sources */,
 				6105988114EC8461B23A3BE4 /* GeofenceService.swift in Sources */,
+				AB1300130013001300130001 /* LocationService.swift in Sources */,
 				4F22581FA7099B9DE649ECE9 /* NearbyActivityAttributes.swift in Sources */,
 				FE0D9EAA5BB41804661C59AB /* NearbyInteractionService.swift in Sources */,
 				12338CE1815E4662A1C6A579 /* ProcessingService.swift in Sources */,
+				AB1200120012001200120001 /* HealthResearchService.swift in Sources */,
 				473AD7E236F54B7CBA135AC3 /* PushService.swift in Sources */,
 				45686ADEBDD1BE402498C96F /* RecordingService.swift in Sources */,
 				B968B8EDEBD5E4CF905C5392 /* RefreshService.swift in Sources */,
@@ -313,9 +369,31 @@
 			target = CA46052F07D1EC97FA053EE7 /* NearbyLiveActivity */;
 			targetProxy = 10F1D472A8F19B15B2364DF0 /* PBXContainerItemProxy */;
 		};
+		2921B34090D04CDDAAE13944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74881F693FE94F8DAA1047C0 /* NotificationService */;
+			targetProxy = BA9A778152FC4580A349A7B5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		00D5280012F94DC8900FA8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9H7GAWSLA8;
+				INFOPLIST_FILE = Extensions/NotificationService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacob.BackgroundWork.NotificationService;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		2B69D09BAFB649C0796C6D92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundWork/Configuration/BackgroundWork.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9H7GAWSLA8;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = BackgroundWork/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,6 +475,7 @@
 		4E65120139EE2A6C48F4808E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9H7GAWSLA8;
 				INFOPLIST_FILE = Extensions/NearbyLiveActivity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -478,6 +558,7 @@
 		7394DD635494C21E24B19F55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9H7GAWSLA8;
 				INFOPLIST_FILE = Extensions/NearbyLiveActivity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,6 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundWork/Configuration/BackgroundWork.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9H7GAWSLA8;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = BackgroundWork/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,6 +591,23 @@
 			};
 			name = Release;
 		};
+		AA8FAEEDB8874C1C8A06FAE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9H7GAWSLA8;
+				INFOPLIST_FILE = Extensions/NotificationService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacob.BackgroundWork.NotificationService;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -517,6 +616,15 @@
 			buildConfigurations = (
 				4E65120139EE2A6C48F4808E /* Debug */,
 				7394DD635494C21E24B19F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		81F7E44E358C4D0695C56B92 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00D5280012F94DC8900FA8B7 /* Debug */,
+				AA8FAEEDB8874C1C8A06FAE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

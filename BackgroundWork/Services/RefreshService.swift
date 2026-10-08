@@ -6,14 +6,9 @@ final class RefreshService {
     func register() {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.jacob.BackgroundWork.refresh", using: nil) { task in
             let url = URL(string: "https://developer.apple.com/news/rss/news.rss")!
-            let fetch = URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data, (response as? HTTPURLResponse)?.statusCode == 200, error == nil else {
-                    task.setTaskCompleted(success: false)
-                    return
-                }
-                try! data.write(to: URL.cachesDirectory.appending(path: "news.rss"))
-                print("News refreshed")
-                task.setTaskCompleted(success: true)
+            let fetch = URLSession.shared.dataTask(with: url) { data, _, error in
+                try? data?.write(to: URL.cachesDirectory.appending(path: "news.rss"))
+                task.setTaskCompleted(success: error == nil)
             }
             task.expirationHandler = { fetch.cancel() }
             fetch.resume()
